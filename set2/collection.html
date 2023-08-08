@@ -36,20 +36,29 @@
             font-family: 'open sauce', sans-serif;
         }
         body{
-            display: flex;
-            /* justify-content: center; */
-            background-color: #f6f5f4 !important;
-            font-size: 150% !important;
             
+            font-size: 150% !important;
+            margin-top: 10px;
+            background-color: lightgray;
         }
         .container{
-            width: 8.5in;
-            height: 14.52in;
-            color:  #3d3d3d !important;
+            width: 8.27in;
+            height: 15in;
+            color:  #303030 !important;
             font-size: 10.6757px;
             font-size: 60%;
             margin: auto;
             letter-spacing: 2.5px;
+            background-color: #f6f5f4 !important;
+            padding-right: 80px;
+            padding-left: 80px;
+            box-shadow: 0px 0px 25px black;
+        }
+        .black-font{
+            color: #000000;
+        }
+        .first_page{
+            margin-bottom: 20px;
         }
         .row{
             display: flex;
@@ -88,6 +97,7 @@
             top: 22.5px;
             font-size: 36.1804px;
             letter-spacing: 10px;
+            color: #000000;
         }
         .invoice_info{
             position: relative;
@@ -210,13 +220,14 @@
             margin-bottom: 20px;
         }
         .footer{
-            color: #623405;
-            margin-top: 130px;
+            color: #5b4f47;
+            margin-top: 120px;
             letter-spacing: 0 !important;
         }
         .footer i{
             margin-right: 15px;
             font-size: 22px;
+            color: #623405;
         }
         .footer .mail{
             margin-left: 100px;
@@ -227,6 +238,7 @@
         .footer_key{
             margin-top: 22.5px;
             padding-left: 145px;
+            color: #1c2120;
         }
         .inline{
             display: inline;
@@ -236,19 +248,22 @@
         }
         .details{
             margin-top: 80px;
-            margin-bottom: 530px;
+            margin-bottom: 480px;
         }
         .details_title{
             font-size: 16px;
             margin-bottom: 20px;
             font-weight: bold;
         }
+        .second-page .footer{
+            margin-top: 50px;
+        }
     </style>
 
 </head>
 <body>
 
-    <div class="container evolve">
+    <div class="container evolve first_page">
 
         <!------------------------HEADER---------------->
         <div class="header">
@@ -268,7 +283,7 @@
         <!-----------------------INVOICE INFO----------->
         <div class="invoice_info">
             <div class="col invoice_for inline_block">
-                <div class="open_sauce"><b>INVOICE FOR</b></div>
+                <div class="open_sauce black-font"><b>INVOICE FOR</b></div>
                 <div>Address: 123 Anywhere St.,Any City, ST 12345</div>
                 <div>Date: 21/05/2022</div>
                 <div>Number: +123-456-7890</div>
@@ -277,7 +292,7 @@
             </div>
             <div class="col invoice_by inline">
                 <div class="invoice_by_info">
-                    <div class="open_sauce"><b>INVOICE BY</b></div>
+                    <div class="open_sauce black-font"><b>INVOICE BY</b></div>
                     <div>&#60;company_name></div>
                     <div>&#60;organisation_number></div>
                     <div>&#60;vat_number></div>
@@ -294,14 +309,14 @@
 
         <!------------------REMINDER TEXT--------------->
         <div class="col reminder_text">
-            <div class="reminder_text_title open_sauce"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
+            <div class="reminder_text_title open_sauce black-font"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
             <div class="text">
                 Eftersom vi inte mottagit någon betalning för ovan faktura till PER JOHANSSON, trots tidigare påminnelser, kommer här ett inkassokrav på edanståend skuld. Undvik ytterligare avgifter och räntor genom att betala enligt nedan senast 2021-10-18.
             </div>
         </div>
 
         <!--------------------REMINDER TABLE-------------->
-        <div class="table col">
+        <div class="table col black-font">
             <div class="table_rows odd inline-block">
                 <div class="cormorant brown">REMINDER REFERS TO.</div>
             </div>
@@ -333,7 +348,7 @@
 
 
         <!-----------------------TOTAL---------------------->
-        <div class="TOTAL">
+        <div class="TOTAL black-font">
             <div class="row">
                 <div class="total">
                     <div class="col titles inline_block">
@@ -385,9 +400,10 @@
                 <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
             </div>
         </div>
-
+    </div>
 <!---------------------------------SECOND PAGE---------------------------->
         <!------------------------HEADER---------------->
+    <div class="container second-page">
         <div class="second_page header">
             <div class="page_no">
                 <p>PAGE 2/2</p>
@@ -457,11 +473,8 @@
                 <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
             </div>
         </div>
-
-
-
-        
     </div>
+      
 
 </body>
 </html>
