@@ -37,19 +37,26 @@
         }
         body{
             display: flex;
-            /* justify-content: center; */
-            background-color: #f6f5f4 !important;
             font-size: 150% !important;
+            margin-top: 10px;
+            background-color: lightgray;
             
         }
+        .black-font{
+            color: #000000;
+        }
         .container{
-            width: 8.5in;
-            height: 14.52in;
-            color:  #3d3d3d !important;
+            width: 8.27in;
+            height: 15in;
+            color:  #303030;
+            background-color: #f6f5f4 !important;
             font-size: 10.6757px;
             font-size: 60%;
             margin: auto;
             letter-spacing: 2.5px;
+            padding-right: 80px;
+            padding-left: 80px;
+            box-shadow: 0px 0px 25px black;
         }
         .row{
             display: flex;
@@ -82,7 +89,7 @@
             position: absolute;
             right: 0px;
             top: 22.5px;
-            font-size: 36.1804px;
+            font-size: 27.1pt;
             letter-spacing: 10px;
         }
         .invoice_info{
@@ -204,13 +211,14 @@
             margin-top: 19px;
         }
         .footer{
-            color: #623405;
+            color: #5b4f47;
             margin-top: 130px;
             letter-spacing: 0 !important;
         }
         .footer i{
             margin-right: 15px;
             font-size: 22px;
+            color: #623405;
         }
         .footer .mail{
             margin-left: 100px;
@@ -221,6 +229,7 @@
         .footer_key{
             margin-top: 22.5px;
             padding-left: 145px;
+            color: #303030;
         }
         .inline{
             display: inline;
@@ -234,23 +243,6 @@
 <body>
 
     <div class="container evolve">
-
-        <!------------------------HEADER---------------->
-        <!-- <div class="row header">
-            <div class="col">
-                <div class="page_no">
-                    PAGE 1/1
-                </div>
-                <div class="page_name title brown">
-                    REMINDER
-                </div>
-            </div>
-            <div class="col logo title">
-                <div>
-                    LOGO
-                </div>
-            </div>
-        </div> -->
         <div class="header">
             <div class="page_no">
                 <p>PAGE 1/1</p>
@@ -268,7 +260,7 @@
         <!-----------------------INVOICE INFO----------->
         <div class="invoice_info">
             <div class="col invoice_for inline_block">
-                <div class="open_sauce"><b>INVOICE FOR</b></div>
+                <div class="open_sauce black-font"><b>INVOICE FOR</b></div>
                 <div>Address: 123 Anywhere St.,Any City, ST 12345</div>
                 <div>Date: 21/05/2022</div>
                 <div>Number: +123-456-7890</div>
@@ -277,7 +269,7 @@
             </div>
             <div class="col invoice_by inline">
                 <div class="invoice_by_info">
-                    <div class="open_sauce"><b>INVOICE BY</b></div>
+                    <div class="open_sauce black-font"><b>INVOICE BY</b></div>
                     <div>&#60;company_name></div>
                     <div>&#60;organisation_number></div>
                     <div>&#60;vat_number></div>
@@ -294,7 +286,7 @@
 
         <!------------------REMINDER TEXT--------------->
         <div class="col reminder_text">
-            <div class="reminder_text_title open_sauce"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
+            <div class="reminder_text_title open_sauce black-font"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
             <div class="upper_text">
                 Vi kan inte se att det inkommit någon betalning för rubricerad faktura. Därför ska istället denna
                 påminnelsefaktura betalas. Betalningen ska vara oss tillhanda senast 2021-10-04. Därefter kan fakturan komma att
@@ -307,7 +299,7 @@
         </div>
 
         <!--------------------REMINDER TABLE-------------->
-        <div class="table col">
+        <div class="table col black-font">
             <div class="table_rows odd inline-block">
                 <div class="cormorant brown">REMINDER REFERS TO.</div>
             </div>
@@ -353,7 +345,7 @@
                             <div>Total VAT :</div>
                             <div class="total_amount"><b>TOTAL</b></div>
                         </div>
-                        <div class="col values inline_block">
+                        <div class="col values inline_block black-font">
                             <div>$ 2 300</div>
                             <div>$ 207</div>
                             <div>$ 207</div>
