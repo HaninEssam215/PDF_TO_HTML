@@ -21,14 +21,23 @@
             justify-content: center;
             margin: 0;
             font-size: 10.67575455px;     
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             font-weight: lighter;   
+            margin-top: 10px;
+            background-color: lightgray;
         }
         .container{
-            width: 8.5in;
+            width: 8.27in;
+            height: 13in;
             margin: auto;
+            margin-bottom: 10px;
             position: relative;
             white-space: nowrap;
+            padding-right: 80px;
+            padding-left: 80px;
+            padding-bottom: 10px;
+            box-shadow: 0px 0px 25px black;
+            background-color: white;
         }
         b{
             font-weight: 800;
@@ -71,20 +80,21 @@
         .page_name{
             font-size: 29.35462379px;
             margin-right: 60px;
-            position: relative;
-            top: -290px;
+            /* position: relative;
+            top: -290px; */
         }
         .billed_to{
             margin-right: 80px;
             width: 210px;
             white-space: normal;
         }
-        .payable_to{
-            position: relative;
-            top: -155px;
+        .billed_to .title, .payable_to .title{
+            font-size: 12pt;
+            font-weight: bold;
         }
         .name{
             margin-bottom: 20px;
+            font-size: 10pt;
         }
         .ocr{
             margin-top: 20px;
@@ -110,7 +120,7 @@
 
         .total{
             text-align: end;
-            font-size: 16.01343346px;
+            font-size: 12pt;
             margin-top: 20px;
             padding-bottom: 20px;
             border-bottom: 1px solid #d9d9d9;
@@ -121,7 +131,8 @@
             white-space: normal;
         }
         .reminder_text_title{
-            font-size: 18.67566681px;
+            font-size: 14pt;
+            font-weight: bold;
         }
         .reminder_text .upper_text{
             margin-bottom: 20px;
@@ -143,10 +154,12 @@
         .iban, .payment_method{
             margin-bottom: 24px;
         }
+        .iban b, .bank_transfer b{
+            font-size: 10pt;
+        }
         .footer{
             color: #5b4f47;
             margin-top: 120px;
-            letter-spacing: 0 !important;
             /* font-size: 15px; */
         }
         .footer i{
@@ -166,7 +179,7 @@
             margin-left: 100px;
         }
         .footer_key{
-            margin-top: 10px;
+            margin-top: 20px;
             padding-left: 145px;
             color: #1c2120;
         }
