@@ -17,18 +17,27 @@
         body{
             color:  #121212 !important;
             font-family: 'Ubuntu', sans-serif;
-            display: flex;
-            justify-content: center;
             margin: 0;
+            margin-top: 10px;
             font-size: 10.67575455px;     
-            letter-spacing: 2px;
+            /* letter-spacing: 2px; */
             font-weight: lighter;      
         }
         .container{
-            width: 8.5in;
+            width: 8.27in;
+            height: 13.5in;
             margin: auto;
+            margin-bottom: 10px;
             position: relative;
             white-space: nowrap;
+            padding-right: 80px;
+            padding-left: 80px;
+            padding-bottom: 10px;
+            box-shadow: 0px 0px 25px black;
+            background-color: white;
+        }
+        .first_page{
+            margin-bottom: 20px;
         }
         b{
             font-weight: 800;
@@ -64,6 +73,8 @@
             margin-top: 35px;
             border-bottom: 1px solid #d9d9d9;
             padding-bottom: 40px;
+            display: flex;
+            justify-items: start;
         }
         .reminder .title{
             margin-bottom: 30px;
@@ -71,20 +82,20 @@
         .reminder .page_name{
             font-size: 29.35462379px;
             margin-right: 60px;
-            position: relative;
-            top: -290px;
+            /* position: relative;
+            top: -250px; */
         }
         .billed_to{
             margin-right: 80px;
             width: 210px;
             white-space: normal;
         }
-        .payable_to{
-            position: relative;
-            top: -200px;
+        .billed_to .title, .payable_to .title{
+            font-size: 12pt;
         }
         .name{
             margin-bottom: 20px;
+            font-size: 10pt;
         }
         .ocr{
             margin-top: 20px;
@@ -119,13 +130,13 @@
         .reminder_text{
             margin-top: 40px;
             margin-bottom: 50px;
-            margin-left: 20px;
+            /* margin-left: 20px; */
             text-align: justify;
             white-space: normal;
         }
         .reminder_text_title{
             margin-bottom: 10px;
-            font-size: 21.333333333333332px !important;
+            font-size: 14pt !important;
         }
         .reminder_text .upper_text{
             margin-bottom: 60px;
@@ -158,10 +169,12 @@
         .iban, .payment_method{
             margin-bottom: 24px;
         }
-
+        .iban b, .bank_transfer b{
+            font-size: 10pt;
+        }
         .details{
             margin-top: 80px;
-            margin-bottom: 530px;
+            margin-bottom: 490px;
             white-space: normal;
         }
         .details_title{
@@ -176,8 +189,7 @@
         
         .footer{
             color: #5b4f47;
-            margin-top: 130px;
-            letter-spacing: 0 !important;
+            margin-top: 170px;
             /* font-size: 15px; */
         }
         .footer i{
@@ -197,8 +209,8 @@
             margin-left: 100px;
         }
         .footer_key{
-            margin-top: 10px;
-            padding-left: 145px;
+            margin-top: 30px;
+            padding-left: 200px;
             color: #1c2120;
         }
         .second_footer{
@@ -217,7 +229,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container first_page">
 
         <!-----------------------HEADER------------------>
         <div class="header">
@@ -333,86 +345,90 @@
                 <div class="page_no inline" style="position: absolute; right: -70px;">PAGE 1/2</div>
             </div>
         </div>
-
-
-         <!-----------------------HEADER------------------>
-         <div class="header">
-            <div class="logo inline_block">LOGO</div>
-            <div class="company_info inline_block">
-                <div class="company_name sansation orange">COMPANY INC,</div>
-                <div class="company_address">123 Anywhere St., Any City, ST 12345</div>
-            </div>
-        </div>
-
-          <!-------------------PAYMENT------------------->
-          <div class="payment_page_name orange sansation">
-            <div>COLLECTION</div>
-          </div>
-          <div class="payment">
-            <div class="payment_title">
-                <div><b>Payment Method</b></div>
-            </div>
-            <div class="inline_block">
-                <div class="inline_block first-column">
-                    <div class="iban">
-                        <div><b>IBAN</b></div>
-                        <div>IBAN-number: JO71CB JO0000 000000 001234 567890</div>
-                        <div>Swift-number: BNOR PH MMXXX</div>
-                        <div>Bank: SEB</div>
-                    </div>
-                    <div class="bank_transfer">
-                        <div><b>BANK TRANSFER</b></div>
-                        <div>Account number: DE89370400440532013000</div>
-                        <div>Clearing number: DEBLZ12345678</div>
-                        <div>Bank: SEB</div>
-                    </div>
-                </div>
-                <div class="inline_block second-column">
-                    <div class="payment_method">
-                        <div>Bankgiro-number: 12345678</div>
-                        <div>Plusgiro-number: 845747383</div>
-                        <div>Swish-number: 1234562355</div>
-                    </div>
-                    <div class="terms">
-                        <div>
-                            Terms of payment: 6
-                        </div>
-                        <div>Late interest rate: 10.50% per annum</div>
-                        <div>Invoice period: &#60;invoice_period></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!---------------------DETAILS------------------>
-        <div class="details">
-            <div class="details_title"><b>Details</b></div>
-            <div class="first-p">
-                Räntor och avgifter:</br>
-                En påminnelseavgift på 60 kr samt en avgift för inkassokrav på 180 kr har påförts fakturan. Det har även påförts en dröjsmålsränta baserad på referensränta + 8 % i årsränta enligt räntelagens 6 paragraf. Dröjsmålsräntan är beräknad från förfallodatum till datum för inkassokravet. Om inte betalning inkommer innan förfallodatum för detta inkassokrav kan ytterligare ränta och avgifter tillkomma.
-            </div>
-            <div class="second-p">
-                Behandling av personuppgifter:</br>
-                Fortnox Finans är personuppgiftsbiträde för behandlingen av dina personuppgifter i syfte att utföra vårt uppdrag att hantera inkassokrav. Vi kan även komma att behandla dina personuppgifter för egna ändamål i rollen som personuppgiftsansvarig, vilket du kan läsa om i vår integritetspolicy som du hittar på fortnox.se.
-            </div>
-        </div>
-
-        <!-----------------------FOOTER------------------>
-        <div class="col footer second_footer">
-            <div class="contacts poppins">
-                <div class="row phone inline"><i class="fa-solid fa-phone"></i>+123-456-7890</div>
-                <div class="row mail inline"><i class="fa-solid fa-envelope"></i>hello@reallygreatsite.com</div>
-                <div class="row location inline"><i class="fa-solid fa-location-dot"></i>123 Anywhere St., Any City, ST 12345</div>
-            
-            </div>
-            <div class="footer_key" style="position: relative;">
-                <div class="inline">&#60;footer_key_1> &#60;footer_key_1> </div>
-                <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
-                <div class="page_no inline" style="position: absolute; right:-70px;">PAGE 2/2</div>
-            </div>
-        </div>
-
-
     </div>
+
+
+<!------------------------Second Page------------------------------------------>
+<div class="container second_page">
+    <!-----------------------HEADER------------------>
+    <div class="header">
+        <div class="logo inline_block">LOGO</div>
+        <div class="company_info inline_block">
+            <div class="company_name sansation orange">COMPANY INC,</div>
+            <div class="company_address">123 Anywhere St., Any City, ST 12345</div>
+        </div>
+    </div>
+
+      <!-------------------PAYMENT------------------->
+      <div class="payment_page_name orange sansation">
+        <div>COLLECTION</div>
+      </div>
+      <div class="payment">
+        <div class="payment_title">
+            <div><b>Payment Method</b></div>
+        </div>
+        <div class="inline_block">
+            <div class="inline_block first-column">
+                <div class="iban">
+                    <div><b>IBAN</b></div>
+                    <div>IBAN-number: JO71CB JO0000 000000 001234 567890</div>
+                    <div>Swift-number: BNOR PH MMXXX</div>
+                    <div>Bank: SEB</div>
+                </div>
+                <div class="bank_transfer">
+                    <div><b>BANK TRANSFER</b></div>
+                    <div>Account number: DE89370400440532013000</div>
+                    <div>Clearing number: DEBLZ12345678</div>
+                    <div>Bank: SEB</div>
+                </div>
+            </div>
+            <div class="inline_block second-column">
+                <div class="payment_method">
+                    <div>Bankgiro-number: 12345678</div>
+                    <div>Plusgiro-number: 845747383</div>
+                    <div>Swish-number: 1234562355</div>
+                </div>
+                <div class="terms">
+                    <div>
+                        Terms of payment: 6
+                    </div>
+                    <div>Late interest rate: 10.50% per annum</div>
+                    <div>Invoice period: &#60;invoice_period></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------DETAILS------------------>
+    <div class="details">
+        <div class="details_title"><b>Details</b></div>
+        <div class="first-p">
+            Räntor och avgifter:</br>
+            En påminnelseavgift på 60 kr samt en avgift för inkassokrav på 180 kr har påförts fakturan. Det har även påförts en dröjsmålsränta baserad på referensränta + 8 % i årsränta enligt räntelagens 6 paragraf. Dröjsmålsräntan är beräknad från förfallodatum till datum för inkassokravet. Om inte betalning inkommer innan förfallodatum för detta inkassokrav kan ytterligare ränta och avgifter tillkomma.
+        </div>
+        <div class="second-p">
+            Behandling av personuppgifter:</br>
+            Fortnox Finans är personuppgiftsbiträde för behandlingen av dina personuppgifter i syfte att utföra vårt uppdrag att hantera inkassokrav. Vi kan även komma att behandla dina personuppgifter för egna ändamål i rollen som personuppgiftsansvarig, vilket du kan läsa om i vår integritetspolicy som du hittar på fortnox.se.
+        </div>
+    </div>
+
+    <!-----------------------FOOTER------------------>
+    <div class="col footer second_footer">
+        <div class="contacts poppins">
+            <div class="row phone inline"><i class="fa-solid fa-phone"></i>+123-456-7890</div>
+            <div class="row mail inline"><i class="fa-solid fa-envelope"></i>hello@reallygreatsite.com</div>
+            <div class="row location inline"><i class="fa-solid fa-location-dot"></i>123 Anywhere St., Any City, ST 12345</div>
+        
+        </div>
+        <div class="footer_key" style="position: relative;">
+            <div class="inline">&#60;footer_key_1> &#60;footer_key_1> </div>
+            <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
+            <div class="page_no inline" style="position: absolute; right:-70px;">PAGE 2/2</div>
+        </div>
+    </div>
+</div>
+         
+
+
 </body>
 </html>
