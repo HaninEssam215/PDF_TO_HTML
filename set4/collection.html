@@ -13,12 +13,10 @@
         body{
             color:  #1c2120 !important;
             font-family: 'Poppins', sans-serif;
-            display: flex;
-            justify-content: center;
             margin: 0;
-            font-size: 10.666666666666666px;
-            
-            /* font-size: 80% !important; */
+            font-size: 8pt;
+            margin-top: 10px;
+            background-color: lightgray; 
         }
         .Header{
             font-weight: 300 !important;
@@ -27,8 +25,16 @@
             width: 8.5in;
             height: 14.52in;
             margin: auto;
+            margin-bottom: 10px;
             position: relative;
             white-space: nowrap;
+            padding-right: 60px;
+            padding-left: 60px;
+            box-shadow: 0px 0px 25px black;
+            background-color: white;
+        }
+        .first_page{
+            margin-bottom: 40px;
         }
         .page_no{
             text-align: end;
@@ -53,10 +59,9 @@
             font-size: 41.00439834666666px !important;
         }
         .logo{
-            font-size: 51.199999999999996px;
+            font-size: 30.4pt;
             position:absolute;
-            right: 0;
-            /* padding-top: 20px; */
+            right: 50px;
             padding-right:69.133858268px;
         }
         .invoice_info table{
@@ -114,9 +119,6 @@
             padding-left: 30px;
             
         }
-        .table_rows div{
-            padding-top: 12.5px;
-        }
         .table .value{
             position: absolute;
             right: 0;
@@ -136,6 +138,9 @@
         .payment{
             position: relative;
             margin-top: 82.5px;
+        }
+        .payment .row{
+            padding-left: 20px;
         }
         .payment_title{
             font-size: 13.866666666666667px;
@@ -171,10 +176,9 @@
         }
         .total{
             position: absolute;
-            right:0;
-            /* top:0; */
+            right: 60px;
             padding-right: 25px;
-            font-size: 13.866666666666667px;
+            font-size: 10.4pt;
             text-align: end;
             white-space: nowrap;
             background-color: #fbd4d4;
@@ -196,7 +200,7 @@
             
         }
         .total .titles{
-            font-size: 12px;
+            font-size: 10.4pt;
         }
         .total_amount{
             text-align: center;
@@ -211,7 +215,7 @@
         }
         .footer{
             color: #5b4f47;
-            margin-top: 150px;
+            margin-top: 220px;
             letter-spacing: 0 !important;
             font-size: 15px;
         }
@@ -227,7 +231,7 @@
             margin-left: 40px;
         }
         .footer_key{
-            margin-top: 10px;
+            margin-top: 20px;
             padding-left: 145px;
             color: #1c2120;
         }
@@ -238,12 +242,13 @@
             display: inline-block;
         }
         .details{
+            padding-left: 20px;
             margin-top: 80px;
-            margin-bottom: 530px;
+            margin-bottom: 560px;
             white-space: normal;
         }
         .details_title{
-            font-size: 16px;
+            font-size: 16.4pt;
             margin-bottom: 20px;
             font-weight: bold;
         }
@@ -253,7 +258,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container first_page">
         <!------------------HEADER--------------------->
         <div class="page_no">
             <p>PAGE 1/1</p>
@@ -394,84 +399,86 @@
                     </div>
                 </div>
 
-<!-----------------------------2nd PAGE----------------------------------------------------------->
-                <!------------------HEADER--------------------->
-                <div class="page_no">
-                    <p>PAGE 1/1</p>
-                </div>
-                <div class="title inline Header">
-                    <h1 class="inline page_name">COLLECTION</h1>
-                </div>
-                <div class="logo inline Header">
-                    <h2 class="inline">LOGO</h2>
-                </div>
+    </div>
+    <div class="container">
+        <!-----------------------------2nd PAGE----------------------------------------------------------->
 
-                <!---------------PAYMENT------------------->
-                <div class="payment">
-                    <div class="payment_title">
-                        <div><b>Payment Info</b></div>
+        <!------------------HEADER--------------------->
+        <div class="page_no">
+            <p>PAGE 1/1</p>
+        </div>
+        <div class="title inline Header">
+            <h1 class="inline page_name">COLLECTION</h1>
+        </div>
+        <div class="logo inline Header">
+            <h2 class="inline">LOGO</h2>
+        </div>
+
+        <!---------------PAYMENT------------------->
+        <div class="payment">
+            <div class="payment_title">
+                <div><b>Payment Info</b></div>
+            </div>
+            <div class="row">
+                <div class="col inline_block first-column">
+                    <div class="col payment_method">
+                        <div>Bankgiro-number: 1234-5678</div>
+                        <div>Plusgiro-number: 1234567-345</div>
+                        <div>Swish-number: 12345678</div>
                     </div>
-                    <div class="row">
-                        <div class="col inline_block first-column">
-                            <div class="col payment_method">
-                                <div>Bankgiro-number: 1234-5678</div>
-                                <div>Plusgiro-number: 1234567-345</div>
-                                <div>Swish-number: 12345678</div>
-                            </div>
-                            <div class="col terms">
-                                <div>
-                                    Terms of payment: 6
-                                </div>
-                                <div>Late interest rate: 10.50% per annum</div>
-                                <div>Invoice period: &#60;invoice_period></div>
-                            </div>
+                    <div class="col terms">
+                        <div>
+                            Terms of payment: 6
                         </div>
-                        <div class="col inline_block second-column">
-                            <div class="col bank_transfer">
-                                <div><b>BANK TRANSFER</b></div>
-                                <div>Account number: DE89370400440532013000</div>
-                                <div>Clearing number: DEBLZ12345678</div>
-                                <div>Bank: SEB</div>
-                            </div>
-                            <div class="col iban">
-                                <div><b>IBAN</b></div>
-                                <div>IBAN-number: JO71CB JO0000 000000 001234 567890</div>
-                                <div>Swift-number: BNOR PH MMXXX</div>
-                                <div>Bank: SEB</div>
-                            </div>
-                        </div>
+                        <div>Late interest rate: 10.50% per annum</div>
+                        <div>Invoice period: &#60;invoice_period></div>
                     </div>
                 </div>
-
-
-                <!---------------------DETAILS------------------>
-                <div class="details">
-                    <div class="details_title">Details</div>
-                    <div class="first-p">
-                        Räntor och avgifter:</br>
-                        En påminnelseavgift på 60 kr samt en avgift för inkassokrav på 180 kr har påförts fakturan. Det har även påförts en dröjsmålsränta baserad på referensränta + 8 % i årsränta enligt räntelagens 6 paragraf. Dröjsmålsräntan är beräknad från förfallodatum till datum för inkassokravet. Om inte betalning inkommer innan förfallodatum för detta inkassokrav kan ytterligare ränta och avgifter tillkomma.
+                <div class="col inline_block second-column">
+                    <div class="col bank_transfer">
+                        <div><b>BANK TRANSFER</b></div>
+                        <div>Account number: DE89370400440532013000</div>
+                        <div>Clearing number: DEBLZ12345678</div>
+                        <div>Bank: SEB</div>
                     </div>
-                    <div class="second-p">
-                        Behandling av personuppgifter:</br>
-                        Fortnox Finans är personuppgiftsbiträde för behandlingen av dina personuppgifter i syfte att utföra vårt uppdrag att hantera inkassokrav. Vi kan även komma att behandla dina personuppgifter för egna ändamål i rollen som personuppgiftsansvarig, vilket du kan läsa om i vår integritetspolicy som du hittar på fortnox.se.
-                    </div>
-                </div>
-
-
-                <!-----------------------FOOTER------------------>
-                <div class="col footer">
-                    <div class="contacts poppins">
-                        <div class="row phone inline"><i class="fa-solid fa-phone"></i>+123-456-7890</div>
-                        <div class="row mail inline"><i class="fa-solid fa-envelope"></i>hello@reallygreatsite.com</div>
-                        <div class="row location inline"><i class="fa-solid fa-location-dot"></i>123 Anywhere St., Any City, ST 12345</div>
-                    
-                    </div>
-                    <div class="footer_key">
-                        <div class="inline">&#60;footer_key_1> &#60;footer_key_1> </div>
-                        <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
+                    <div class="col iban">
+                        <div><b>IBAN</b></div>
+                        <div>IBAN-number: JO71CB JO0000 000000 001234 567890</div>
+                        <div>Swift-number: BNOR PH MMXXX</div>
+                        <div>Bank: SEB</div>
                     </div>
                 </div>
+            </div>
+        </div>
 
+
+        <!---------------------DETAILS------------------>
+        <div class="details">
+            <div class="details_title">Details</div>
+            <div class="first-p">
+                Räntor och avgifter:</br>
+                En påminnelseavgift på 60 kr samt en avgift för inkassokrav på 180 kr har påförts fakturan. Det har även påförts en dröjsmålsränta baserad på referensränta + 8 % i årsränta enligt räntelagens 6 paragraf. Dröjsmålsräntan är beräknad från förfallodatum till datum för inkassokravet. Om inte betalning inkommer innan förfallodatum för detta inkassokrav kan ytterligare ränta och avgifter tillkomma.
+            </div>
+            <div class="second-p">
+                Behandling av personuppgifter:</br>
+                Fortnox Finans är personuppgiftsbiträde för behandlingen av dina personuppgifter i syfte att utföra vårt uppdrag att hantera inkassokrav. Vi kan även komma att behandla dina personuppgifter för egna ändamål i rollen som personuppgiftsansvarig, vilket du kan läsa om i vår integritetspolicy som du hittar på fortnox.se.
+            </div>
+        </div>
+
+
+        <!-----------------------FOOTER------------------>
+        <div class="col footer">
+            <div class="contacts poppins">
+                <div class="row phone inline"><i class="fa-solid fa-phone"></i>+123-456-7890</div>
+                <div class="row mail inline"><i class="fa-solid fa-envelope"></i>hello@reallygreatsite.com</div>
+                <div class="row location inline"><i class="fa-solid fa-location-dot"></i>123 Anywhere St., Any City, ST 12345</div>
+            
+            </div>
+            <div class="footer_key">
+                <div class="inline">&#60;footer_key_1> &#60;footer_key_1> </div>
+                <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
+            </div>
+        </div>
 
     </div>
 </body>
