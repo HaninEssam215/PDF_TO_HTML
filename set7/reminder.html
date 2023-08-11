@@ -16,73 +16,77 @@
         }
         body{
             font-size: 8pt;
-            font-size: 1.48em;
+            /* font-size: 1.48em; */
             font-weight: normal;
             font-family: 'Poppins', sans-serif;
             margin: 0;
+            margin-top: 10px;
             white-space: normal;
+            margin-top: 10px;
+            background-color: lightgray; 
+            color: #1c2120;
         }
         .container{
-            width: 1227pt;
-            height: 1670pt;
+            width: 8.27in;
+            height: 14in;
             margin: auto;
+            margin-bottom: 10px;
             position: relative;
+            box-shadow: 0px 0px 25px black;
+            background-color: white;
         }
         .content{
-            /* width: 8.27in; */
             white-space: normal;
-            padding-left: 150px;
-            padding-right: 150px;
+            padding-right: 50px;
+        }
+        .light{
+            color: #5b4f47;
         }
         .Header{
             background-color: #1d3b58;
             color: #ffffff;
-            height: 125px + 1.48em;
+            height: 125px;
             padding-bottom: 10px;
             margin-bottom: 21px;
             position: relative;
-            /* width: 13in; */
-            /* padding-right: 100px;
-            padding-left: 100px; */
         }
         .page_no{
             position: absolute;
-            right: 75px;
+            right:30px;
             font-weight: normal;
         }
         .page_name{
-            font-size: 63.560118258px;
-            padding-left: 67.58568px;
+            font-size: 32.2pt;
+            padding-left: 30px;
             position: relative;
             top: 45px;
         }
         .logo{
-            font-size: 65.62504578px;
+            font-size: 30.4pt;
             position: absolute;
-            right: 105px;
+            right: 60px;
             margin-top: 30px;
         }
         .company_info{
             margin-top: 45.666px;
-            padding-left: 67.58568px;
+            padding-left: 30px;
             padding-right: 45.666px;
             text-transform: uppercase;
         }
         .company_info .info{
-            margin-left: 145px;
+            margin-left: 82px;
         }
         .invoice{
             white-space: normal;
         }
         .invoice .title{
-            font-size: 12.98329926px;
-            font-size: 19.2152829048px;
+            font-size:9.7pt;
             font-weight: 500;
         }
         .invoice .name{
-            font-size: 22.07063484px;
-            font-size: 32.6645395632px;
+            font-size: 16.5pt;
             padding-bottom: 44.4px;
+            font-weight: 500;
         }
         .invoice .ocr{
             position: relative;
@@ -98,61 +102,54 @@
         }
         .reminder_text_title{
             margin-bottom: 14.8px;
-            font-size: 19.40627861px;
-            font-size: 148%;
+            font-size: 14.5pt;
+            font-weight: 500;
         }
         .reminder_text .upper_text{
             margin-bottom: 29.6px;
         }
-        .reminder_text .upper_text,
-        .reminder_text .lower_text{
-            font-size: 17.76px;
-        }
         .table{
             position: relative;
             white-space: nowrap;
-        }
-        .table .title{
-            font-size: 13.866666666666667px;
-            font-size: 148%;
+            font-size: 9.7pt;
         }
         .table_rows{
             margin-bottom: 15px;
             display: flex;
             align-items: center;
         }
-        /* .table_rows div{
-            padding-top: 12.5px;
-        } */
         .table .value{
             position: absolute;
             right: 0;
             padding-right: 27.5px;
             white-space: nowrap;
         }
-        .table, .reminder_text, .invoice, .payment, .footer{
-            padding-left: 44.4px;
+        .reminder_text, .invoice, .payment, .footer{
+            padding-left: 60px;
         }
         .reminder_table{
-            font-size: 13.866666666666667px;
-            font-size: 20.5226568px;
             padding-bottom: 20px;
         }
         .reminder_table_title{
             border-bottom: 1px solid #d9d9d9;
-            font-weight: 500;
+            font-weight: 700;
             padding-bottom: 10px;
         }
-
+        .table{
+            padding-left: 40px;
+        }
+        .reminder_table_title, .table_rows{
+            padding-left: 20px;
+        }
         .TOTAL{
             background-color: #1d3b58;
             color: #ffffff;
             font-weight: bold;
             position: relative;
-            padding-top: 27px;
-            padding-bottom: 90px;
-            font-size: 20.01679039px;
-            font-size: 148%;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            font-size: 15pt;
+            margin-left: 40px;
         }
         .TOTAL .value{
             position: absolute;
@@ -160,27 +157,21 @@
         }
         .TOTAL .total{
             position: absolute;
-            left: 1021px;
+            left: 500px;
         }
         .payment{
-            margin-top: 81.4px;
+            margin-top: 40px;
             position: relative;
         }
         .payment_title{
-            font-size: 20.00678253px;
+            font-size: 15pt;
             font-size: 148%;
         }
         .payment .second-column{
             padding-left: 48.1px;
-
-            /* position: absolute;
-            top: 80px; */
         }
         .iban, .payment_method{
             margin-bottom: 24px;
-        }
-        .iban, .bank_transfer{
-            font-size: 19.7501473272px;
         }
         .bank_transfer{
             padding-bottom: 47px;
@@ -194,7 +185,7 @@
             letter-spacing: 0 !important;
             font-weight: 300;
             position: absolute;
-            bottom: 0;
+            bottom: 10px;
             /* font-size: 15px; */
         }
         .footer i{
@@ -207,13 +198,13 @@
             justify-content: space-between;
         }
         .footer .mail{
-            margin-left: 130px;
+            margin-left: 100px;
         }
         .footer .location{
-            margin-left: 130px;
+            margin-left: 100px;
         }
         .footer_key{
-            margin-top: 10px;
+            margin-top: 20px;
             padding-left: 145px;
             color: #1c2120;
         }
@@ -326,31 +317,31 @@
                 </div>
                 <div class="inline_block">
                     <div class="inline_block first-column">
-                        <div class="payment_method">
+                        <div class="payment_method light">
                             <div>Bankgiro-number: 12345678</div>
                             <div>Plusgiro-number: 845747383</div>
                             <div>Swish-number: 1234562355</div>
                         </div>
                         <div class="iban">
                             <div><b>IBAN</b></div>
-                            <div>IBAN-number: JO71CB JO0000 000000 001234 567890</div>
-                            <div>Swift-number: BNOR PH MMXXX</div>
-                            <div>Bank: SEB</div>
+                            <div class="light">IBAN-number: JO71CB JO0000 000000 001234 567890</div>
+                            <div class="light">Swift-number: BNOR PH MMXXX</div>
+                            <div class="light">Bank: SEB</div>
                         </div>
                     </div>
                     <div class="inline_block second-column">
                         <div class="terms">
                             <div class="bank_transfer">
                                 <div class="title"><b>BANK TRANSFER</b></div>
-                                <div>Account number: DE89370400440532013000</div>
-                                <div>Clearing number: DEBLZ12345678</div>
-                                <div>Bank: SEB</div>
+                                <div class="light">Account number: DE89370400440532013000</div>
+                                <div class="light">Clearing number: DEBLZ12345678</div>
+                                <div class="light">Bank: SEB</div>
                             </div>
-                            <div>
+                            <div class="light">
                                 Terms of payment: 6
-                            </div>
-                            <div>Late interest rate: 10.50% per annum</div>
-                            <div>Invoice period: &#60;invoice_period></div>
+                            </div class="light">
+                            <div class="light">Late interest rate: 10.50% per annum</div>
+                            <div class="light">Invoice period: &#60;invoice_period></div>
                         </div>
                     </div>
                 </div>
@@ -364,10 +355,11 @@
                     <div class="row mail inline"><i class="fa-solid fa-envelope"></i>hello@reallygreatsite.com</div>
                     <div class="row location inline"><i class="fa-solid fa-location-dot"></i>123 Anywhere St., Any City, ST 12345</div>
                 </div>
-                <div class="footer_key" style="position: relative;">
+                <div class="footer_key">
                     <div class="inline">&#60;footer_key_1> &#60;footer_key_1> </div>
                     <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
-                    <div class="page_no inline" style="position: absolute; right: -100px; font-size: 33.6998815208px;">PAGE 1/1</div>
+                    <div class="page_no inline" style="position: absolute;
+                    right: -50px;top: 20px; font-size: 12pt;">PAGE 1/1</div>
                 </div>
             </div>
 
