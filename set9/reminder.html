@@ -17,17 +17,19 @@
         }
         @font-face {
             font-family: 'lovelo bold';
-            src: url("fonts/Lovelo Line Bold.otf"), format(opentype);
+            src: url("fonts/Lovelo Black.otf"), format(opentype);
         }
         body{
             font-size: 8pt;
-            font-size: 1.48em;
             font-weight: normal;
             font-family: 'Sukar', sans-serif;
             margin: 0;
             white-space: nowrap;
             color: #1a132f;
-            letter-spacing: 2px;
+            margin-top: 10px;
+            background-color: lightgray; 
+            display: flex;
+            justify-content: center;
         }
         .inline{
             display: inline;
@@ -38,21 +40,23 @@
 
         /**********************CONTAINERS*******************/
         .container{
-            width: 1227pt;
-            height: 1660pt;
+            width: 8.27in;
+            height: 12.5in;
             margin: auto;
             position: relative;
             background-color: #1a132f;
             z-index: 0;
-            padding-top: 30px;
+            padding-top: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 25px black;
         }
         .content{
-            height: 1640pt;
-            padding-right: 111px;
-            padding-left: 133.2px;
+            height: 12.4in;
+            padding-right: 50px;
+            padding-left: 50px;
             background-color: white;
-            margin-right: 80px;
-            margin-left: 30px;
+            margin-right: 10px;
+            margin-left: 10px;
             margin-top: 0px;
             z-index: 0;
             
@@ -65,7 +69,7 @@
         .page_no{
             position: absolute;
             right: 0;
-            font-family: 'lovelo light', sans-serif;
+            font-family: 'lovelo bold', sans-serif;
             padding-top: 37px;
         }
         .page_name{
@@ -73,7 +77,7 @@
             left: 0;
             font-family: 'lovelo bold', sans-serif;
             font-weight: bold;
-            font-size: 91.928px;
+            font-size: 48.6pt;
             padding-top: 74px;
         }
         .logo{
@@ -81,42 +85,41 @@
             right: 0;
             font-size: 'lovelo bold', sans-serif;
             font-weight: bold;
-            font-size: 49.96px;
+            font-size: 27pt;
             padding-top: 88.8px;
         }
         /****************************REMINDER TEXT*****************/
         .reminder_text{
-            margin-top: 500px;
-            padding-bottom: 66.6px;
-            margin-bottom: 33.3px;
+            margin-top: 230px;
+            margin-bottom: 40px;
             white-space: normal;
-            font-size: 80% !important;
         }
         .reminder_text .title{
-            margin-bottom: 20px;
-            font-size: 20.2pt;
+            /* margin-bottom: 20px; */
+            font-size: 12pt;
             font-weight: bold;
         }
         .reminder_text .first_p{
-            margin-bottom: 29.6px;
+            margin-bottom: 20px;
         }
 
         /****************************TABLE*************************/
         .table{
             position: relative;
-            border-bottom: 5px solid #233a44;
-            margin-bottom: 29.6px;
+            border-bottom: 1px solid #233a44;
+            margin-bottom: 20px;
             color: #000000;
+            padding-bottom: 20px;
         }
         .table .title{
-            margin-bottom: 41.44px;
-            padding-bottom: 29.6px;
-            font-size: 120%;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
             font-weight: bold;
-            border-bottom: 5px solid #233a44;
+            font-size: 12pt;
+            border-bottom: 1px solid #233a44;
         }
         .table_rows{
-            margin-bottom: 25.16px;
+            margin-bottom: 5px;
         }
         .table .value{
             position: absolute;
@@ -126,13 +129,14 @@
             position: relative;
             height: 29px;
             padding-bottom: 22.2px;
-            margin-bottom: 62.9px;
-            right: -890px;
+            margin-bottom: 0px;
+            right: -280px;
             width: 390px;
+            font-size: 10pt;
         }
         .total .title{
             position: absolute;
-            right: 161.4px;
+            right: 90px;
             font-weight: bold;
         }
         .total .value{
@@ -141,29 +145,29 @@
         }
         /****************************PAYMENT***********************/
         .payment{
-            margin-top: 40px;
             position: relative;
-            font-size: 90% !important;
             color: #000000;
-            line-height: 30px;
         }
         .payment_title{
-            font-size: 32.2px;
-            margin-bottom: 35px;
+            font-size: 12pt;
+            margin-bottom: 10px;
         }
         .payment .second-column{
             padding-left: 60px;
             position: absolute;
-            top: 50px;
+            top: 20px;
         }
         .terms{
             font-weight: bold;
         }
-        .bank_transfer, .terms{
-            margin-top: 80px
+        .bank_transfer{
+            margin-top: 30px
+        }
+        .terms{
+            margin-top: 45px;
         }
         .iban .title, .bank_transfer .title{
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-weight: bold;
         }
 
@@ -174,39 +178,37 @@
             margin-top: 100px;
             letter-spacing: 0 !important;
             position: absolute;
-            bottom: 40px;
+            bottom: 15px;
         }
         .footer .contacts{
             display: flex;
-            justify-content: space-between;
-            padding-bottom: 20px;
+            padding-bottom: 10px;
         }
         .footer .phone{
-            margin-left: 120px;
+            margin-left: 140px;
         }
         .footer .location{
-            margin-left: 120px;
+            margin-left: 140px;
         }
         .footer_key{
-            font-size: 50%;
-            padding-left: 300px;
+            font-size: 6pt;
+            padding-left: 100px;
             color: #000000;
         }
         .footer_key span{
-            padding-left: 50px;
+            padding-left: 20px;
         }
 
         /*************************INVOICE**********************/
         .invoice{
-            height: 350px;
-            width: 100%;
+            height: 150px;
+            width: 8.27in;
             background-color: #f7e2e2;
             position: absolute;
-            top: 300px;
+            top: 240px;
             z-index: 100;
-            padding-left: 170.2px;
-            font-size: 70% !important;
-            line-height: 40px;
+            display: flex;
+            align-items: center;
         }
         .invoice .title{
             font-weight: bold;
@@ -214,20 +216,14 @@
         .invoice_to{
             position: relative;
             top: 0;
-            padding-top: 40px;
+            padding-left: 60px;
         }
 
         .payable_to{
-            margin-left: 140px;
-            position: relative;
-            top: -75px;
-        }
-        .payable_to .title{
+            margin-left: 110px;
         }
         .ocr{
-            margin-left: 140px;
-            position: relative;
-            top: -75px;
+            margin-left: 110px;
         }
     </style>
 </head>
