@@ -17,17 +17,19 @@
         }
         @font-face {
             font-family: 'lovelo bold';
-            src: url("fonts/Lovelo Line Bold.otf"), format(opentype);
+            src: url("fonts/Lovelo Black.otf"), format(opentype);
         }
         body{
             font-size: 8pt;
-            font-size: 1.48em;
             font-weight: normal;
             font-family: 'Sukar', sans-serif;
             margin: 0;
             white-space: nowrap;
             color: #1a132f;
-    
+            margin-top: 10px;
+            background-color: lightgray; 
+            display: flex;
+            justify-content: center;
         }
         .inline{
             display: inline;
@@ -38,21 +40,23 @@
 
         /**********************CONTAINERS*******************/
         .container{
-            width: 1227pt;
-            height: 1660pt;
+            width: 8.27in;
+            height: 12.5in;
             margin: auto;
             position: relative;
             background-color: #1a132f;
             z-index: 0;
-            padding-top: 30px;
+            padding-top: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 25px black;
         }
         .content{
-            height: 1640pt;
-            padding-right: 111px;
-            padding-left: 133.2px;
+            height: 12.4in;
+            padding-right: 50px;
+            padding-left: 50px;
             background-color: white;
-            margin-right: 80px;
-            margin-left: 30px;
+            margin-right: 10px;
+            margin-left: 10px;
             margin-top: 0px;
             z-index: 0;
             
@@ -65,7 +69,7 @@
         .page_no{
             position: absolute;
             right: 0;
-            font-family: 'lovelo light', sans-serif;
+            font-family: 'lovelo bold', sans-serif;
             padding-top: 37px;
         }
         .page_name{
@@ -73,27 +77,26 @@
             left: 0;
             font-family: 'lovelo bold', sans-serif;
             font-weight: bold;
-            font-size: 91.928px;
+            font-size: 48.6pt;
             padding-top: 74px;
         }
         .logo{
             position: absolute;
             right: 0;
             font-size: 'lovelo bold', sans-serif;
-            font-weight: bold;
-            font-size: 49.96px;
+            font-weight: 900;
+            font-size: 27pt;
             padding-top: 88.8px;
         }
         .company_info{
             /* padding-left: 67.58568px; */
             padding-right: 45.666px;
             position: absolute;
-            font-size: 70%;
-            top: 230px;
+            top: 200px;
             font-weight: bold;
         }
         .company_info .info{
-            margin-left: 230px;
+            margin-left: 105px;
         }
         /****************************REMINDER TEXT*****************/
         .reminder_text{
@@ -116,72 +119,69 @@
             position: relative;
             white-space: nowrap;
             margin-bottom: 10px;
-            margin-top: 650px;
+            margin-top: 400px;
         }
         .table .titles{
-            font-size: 13.866666666666667px;
-            font-size: 148%;
+            font-size: 10pt;
             font-weight: bold;
-            padding-bottom: 29.6px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
             color: #000000;
             border-bottom: 1px solid #233a44;
         }
         .first-row, .second-row, .third-row{
-            padding-top: 22.2px;
-            padding-bottom: 22.2px;
+            padding-bottom: 5px;
             color: #000000;
         }
         .first-row .third-col, .second-row .third-col, .third-row .third-col{
             margin-left: 30px;
         }
         .first-row .fourth-col, .second-row .fourth-col, .third-row .fourth-col{
-            padding-left: 30px !important;
+            padding-left: 40px !important;
         }
         .first-row .fifth-col, .second-row .fifth-col, .third-row .fifth-col{
-            padding-left: 80px !important;
+            padding-left: 76px !important;
         }
         .table .first-col{
             width: 37px;
         }
         .table .second-col{
-            width: 210.9px;
-            padding-left: 85.1px;
+            width: 60px;
+            padding-left: 30px;
         }
         .titles .second-col{
-            padding-left: 85.1px !important;
+            padding-left: 30px !important;
         }
         .titles .third-col{
-            padding-left: 170px !important;
+            padding-left: 125px !important;
         }
         .table .third-col{
-            width: 60px;
-            padding-left: 170.8px;
+            width: 30px;
+            padding-left: 100.8px;
         }
         .table .fourth-col{
-            width: 80px;
-            padding-left: 40.7px;
+            width: 30px;
+            padding-left: 50.7px;
         }
         .table .fifth-col{
-            width: 160.6px;
-            padding-left: 37px;
+            width: 50px;
+            padding-left: 50px;
         }
         .table .sixth-col{
-            width: 155.6px;
-            padding-left: 33.3px;
+            width: 55px;
+            padding-left: 50px;
         }
         .titles .seventh-col{
-            padding-left: 44.4px !important;
+            padding-left: 60px !important;
         }
         .table .seventh-col{
             width: 51.8px;
-            /* padding-left: 24.4px; */
+            padding-left: 35px;
         }
-        .table, .reminder_text, .invoice, .payment, .footer{
+        .reminder_text, .invoice, .payment, .footer{
             padding-left: 44.4px;
         }
         .reminder_table{
-            font-size: 13.866666666666667px;
-            font-size: 20.5226568px;
             padding-bottom: 20px;
         }
         .reminder_table_title{
@@ -190,50 +190,46 @@
             padding-bottom: 10px;
         }
         .TOTAL_TEXT{
-            position: relative;
             font-weight: bold;
+            font-size: 10pt;
             color: #000000;
-            font-size: 80% !important;
-            padding-bottom: 30px;
+            padding-bottom: 10px;
             border-bottom: 1px solid #233a44;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
         .TOTAL_TEXT .total{
             position: absolute;
-            left: 700px;
+            left: 550px;
             text-align: end;
         }
         .TOTAL_TEXT .value{
             position: relative;
             text-align: center;
-            left: 1200px;
+            left: 630px;
             /* right: 0; */
         }
         .TOTAL_TEXT .total div,
         .TOTAL_TEXT .value div
         {
-            padding-bottom: 10px;
+            padding-bottom: 5px;
         }
         .total{
-            position: relative;
             height: 29px;
-            margin-bottom: 32.9px;
-            right: -890px;
-            width: 390px;
             color: #000000;
+            font-size: 10pt;
         }
         .total .title{
             position: absolute;
-            right: 181.4px;
+            right: 155px;
             font-weight: bold;
         }
         .total .value{
             position: absolute;
-            right: 0;
+            right: 55px;
         }
         .thanks{
             position: relative;
-            font-size: 50pt;
+            font-size: 25pt;
             font-weight: bold;
             color: #000000;
         }
@@ -241,32 +237,34 @@
             position:absolute;
             right: 0
         }
-        /****************************PAYMENT***********************/
-        .payment{
-            margin-top: 150px;
+         /****************************PAYMENT***********************/
+         .payment{
             position: relative;
-            font-size: 90% !important;
             color: #000000;
-            line-height: 30px;
+            margin-top: 30px;
         }
         .payment_title{
-            font-size: 32.2px;
-            margin-bottom: 35px;
+            font-size: 12pt;
+            margin-bottom: 10px;
         }
         .payment .second-column{
             padding-left: 60px;
             position: absolute;
-            top: 50px;
+            top: 20px;
         }
         .terms{
             font-weight: bold;
         }
-        .bank_transfer, .terms{
-            margin-top: 80px
+        .bank_transfer{
+            margin-top: 30px
+        }
+        .terms{
+            margin-top: 45px;
         }
         .iban .title, .bank_transfer .title{
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-weight: bold;
+            font-size: 10pt;
         }
 
 
@@ -276,63 +274,60 @@
             margin-top: 100px;
             letter-spacing: 0 !important;
             position: absolute;
-            bottom: 40px;
+            bottom: 15px;
         }
         .footer .contacts{
             display: flex;
-            justify-content: space-between;
-            padding-bottom: 20px;
+            padding-bottom: 10px;
         }
         .footer .phone{
-            margin-left: 120px;
+            margin-left: 140px;
         }
         .footer .location{
-            margin-left: 120px;
+            margin-left: 140px;
         }
         .footer_key{
-            font-size: 50%;
-            padding-left: 300px;
+            font-size: 6pt;
+            padding-left: 100px;
             color: #000000;
         }
         .footer_key span{
-            padding-left: 50px;
+            padding-left: 20px;
         }
 
         /*************************INVOICE**********************/
         .invoice{
-            font-weight: bold;
-            height: 450px;
-            width: 100%;
+            height: 250px;
+            width: 7.8in;
             background-color: #f7e2e2;
             position: absolute;
-            top: 300px;
+            top: 240px;
             z-index: 100;
-            padding-left: 170.2px;
-            font-size: 60% !important;
-            line-height: 30px;
+            display: flex;
+            align-items: start;
+            font-weight: bold;
+            padding-top: 20px;
         }
         .invoice{
             white-space: nowrap;
             margin-bottom: 70.3px;
         }
+        .invoice_to{
+            padding-left: 20px;
+        }
         .invoice .address{
-            width: 636.8px;
+            width: 400px;
             position: relative;
-            top: -60px;
             white-space: normal;
         }
-        .invoice_to, .payable_to{
-            position: relative;
-            top: 50px;
-        }
         .invoice .extra_field{
-            margin-top: 14.4px;
+            margin-top: 50px;
         }
         .invoice .ocr{
             margin-top: 36.6px;
         }
         .payable_to{
-            padding-left: 125.8px;
+            padding-left: 70px;
         }
     </style>
 </head>
