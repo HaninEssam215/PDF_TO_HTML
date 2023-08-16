@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>reminder</title>
+
+    <style>
+        body{
+            font-size: 8pt;
+            font-weight: normal;
+            font-family: 'poppins', sans-serif;
+            margin: 0;
+            white-space: nowrap;
+            color: #000000;
+            margin-top: 10px;
+            background-color: lightgray; 
+            display: flex;
+            justify-content: center;
+        }
+        .inline{
+            display: inline;
+        }
+        .inline_block{
+            display: inline-block;
+        }
+
+        /********************************CONTAINERS**************************/
+        .container{
+            width: 8.27in;
+            height: 12.5in;
+            margin: auto;
+            position: relative;
+            background-color: #ffffff;
+            z-index: 0;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 25px black;
+        }
+        .content{
+            padding-right: 50px;
+            padding-left: 50px;
+            background-color: white;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: 0px;
+            z-index: 0;
+        }
+        /*********************************HEADER**********************************/
+        .page_no{
+            position: relative;
+            color: white;
+            font-size: 12pt;
+            font-weight: 500;
+            background-image: linear-gradient(90deg, #004aad, #cb6ce6);
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .page_no div{
+            position: absolute;
+            right: 0;
+            padding-right: 50px;
+        }
+        .Header{
+            position: relative;
+            margin-top: 20px;
+            height: 80px;
+            color: #1c2120;
+        }
+        .page_name{
+            font-size: 33.3pt;
+            font-weight: 700;
+            position: absolute;
+            right: 0;
+        }
+        .logo{
+            font-size: 33.3pt;
+            font-weight: 700;
+            padding-left: 50px;
+            position: absolute;
+            top: 10px;
+        }
+        /*******************************INVOICE**********************************/
+        .invoice{
+            margin-top: 20px;
+            display: flex;
+        }
+        .invoice .title{
+            font-size: 9.7pt;
+            font-weight: 700;
+        }
+        .invoice .name{
+            font-size: 16.5pt;
+            font-weight: 500;
+            color: #1c2143;
+            border-bottom: 3px solid #1c2120;
+            width: 40px;
+            margin-bottom: 20px;
+        }
+        .invoice_to{
+            width: 250px;
+        }
+        .invoice_by{
+            padding-left: 40px;
+        }
+        .company_info{
+            font-size: 10pt;
+            font-weight: 500;
+            color:#1c2120;
+            margin-bottom: 15px;
+        }
+        /*******************************REMINDER TEXT****************************/
+        .reminder_text{
+            margin-top: 40px;
+            margin-bottom: 50px;
+            text-align: justify;
+            white-space: normal;
+        }
+        .reminder_text_title{
+            font-size: 12pt;
+            font-weight: 700;
+        }
+        .reminder_text .upper_text{
+            margin-bottom: 20px;
+        }
+        .reminder_text .upper_text,
+        .reminder_text .lower_text{
+            padding-left: 1px;
+            font-size: 9pt;
+            font-weight: 300;
+        }
+        /******************************************TABLE*******************************/
+        .row{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .col{
+            display: flex;
+            flex-direction: column;
+        }
+        .table{
+            position: relative;
+            margin-top: 37px;
+            white-space: nowrap;
+            border-bottom: 1px solid #000000;
+        }
+        .table .title{
+            font-weight: 500;
+            font-size: 10pt;
+            color: white;
+            background-image: linear-gradient(90deg, #004aad, #cb6ce6);
+            width: 95.5%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+
+        }
+
+        .table_rows{
+            height: 45px;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+        }
+        .even{
+            background-color: #ffffff;
+        }
+        .odd{
+            background-color: #f1eeeb;
+        }
+        .table .value{
+            position: absolute;
+            right: 0;
+            padding-right: 27.5px;
+            white-space: nowrap;
+        }
+        /*******************************PAYMENT**********************************/
+        .payment{
+            position: relative;
+            margin-top: 25px;
+            color: #5b4f47
+        }
+        .payment .black{
+            color:#000000;
+            font-weight: 500;
+        }
+        .payment_method div,
+        .iban div,
+        .bank_transfer div{
+            margin-bottom: 5px;
+        }
+        .bank_transfer_row{
+            display: flex;
+            justify-content: space-between;
+        }
+        .payment_method .title{
+            margin-bottom: 10px;
+            font-size: 9.7pt;
+            font-weight: 500;
+        }
+        .terms{
+            margin-top: 26px;
+        }
+        .total{
+            position: absolute;
+            right:0;
+            top:0;
+            font-size: 13.6pt;
+            font-weight: 500;
+            text-align: end;
+            white-space: nowrap;
+            background-image: linear-gradient(90deg, #004aad, #cb6ce6);
+            color: white;
+            padding-right: 30px;
+        }
+        .total_amount{
+            padding-left: 20px;
+            width: 50px;
+            font-size: 13.6pt;
+            font-weight: 500;
+            
+        }
+        .total_value{
+            padding-left: 20px;
+            width: 50px;
+        }
+        .total .col div{
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .total .values{
+            margin-left: 30px;
+            text-align: start;
+            
+        }
+        .total_amount{
+            text-align: center;
+        }
+        .iban,
+        .bank_transfer{
+            margin-top: 19px;
+        }
+        /*******************************FOOTER***********************************/
+        .footer{
+            color: #5b4f47;
+            margin-top: 30px;
+            letter-spacing: 0 !important;
+        }
+        .footer i{
+            margin-right: 15px;
+            color: #8c52ff !important;
+            display: flex;
+            align-items: center;
+            font-size: 10pt;
+        }
+        .footer .mail{
+            margin-left: 100px;
+        }
+        .footer .location{
+            margin-left: 100px;
+        }
+        .footer_key{
+            position: absolute;
+            bottom: 0;
+            color: white;
+            font-weight: 300;
+            background-image: linear-gradient(90deg, #004aad, #cb6ce6);
+            height: 40px;
+            display: flex;
+            align-items: center;
+            width: 8.27in;
+        }
+        .footer_key_1{
+            padding-left: 160px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page_no">
+            <div>
+                PAGE 1/1
+            </div>
+        </div>
+        <div class="content">
+            <!-----------------------------------HEADER----------------------->
+            <div class="Header">
+                <div class="logo inline">
+                    <div class="inline">LOGO</div>
+                </div>
+                <div class="title inline">
+                    <div class="inline page_name">REMINDER</div>
+                </div>
+            </div>
+
+            <!------------------------------------INVOICE INFO---------------->
+            <div class="invoice">
+                <div class="invoice_to inline_block">
+                    <div class="title">INVOICE TO :</div>
+                    <div class="name">SAMIRA HADID</div>
+                    <div>Address: 123 Anywhere St.,
+                        Any City, ST 12345</div>
+                    <div>Date : 21/05/2022</div>
+                    <div>Number: +123-456-7890</div>
+                    <div>&#60;receiver_extra_field1>: &#60;value1></div>
+                    <div>&#60;receiver_extra_field2>: &#60;value2></div>
+                </div>
+                <div class="invoice_by inline_block">
+                    <div class="title">INVOICE BY :</div>
+                    <div class="company_info">
+                        <div class="inline_block">
+                            <div>&#60;COMPANY_NAME></div>
+                            <div>&#60;ORGANISATION_NUMBER></div>
+                        </div>
+                        <div class="inline_block" style="padding-left: 40px;">
+                            <div>&#60;VAT_NUMBER></div>
+                            <div style="text-transform: uppercase;">Godkänd för F-skatt</div>
+                        </div>
+                    </div>
+                    <div class="ocr">
+                        <div>OCR No: 12345</div>
+                        <div>Reminder number: 2857193521</div>
+                        <div>Date: 23/06/2023</div>
+                        <div>Due date: 30/06/2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------REMINDER TEXT--------------->
+            <div class="col reminder_text">
+                <div class="reminder_text_title open_sauce"><b>Påminnelse obetald faktura nr 5682 från Comp. Inc.</b></div>
+                <div class="upper_text">
+                    Vi kan inte se att det inkommit någon betalning för rubricerad faktura. Därför ska istället denna
+                    påminnelsefaktura betalas. Betalningen ska vara oss tillhanda senast 2021-10-04. Därefter kan fakturan komma att
+                    överlämnas till inkasso vilket medför ytterligare kostnader.
+                </div>
+                <div class="lower_text">
+                    Ār fakturan redan betald?</br>
+                    Om du har betalat rekommenderar vi dig att kontrollera att du har betalat till rätt bankgiro och med rätt referens.
+                </div>
+            </div>
+
+            <!--------------------REMINDER TABLE-------------->
+            <div class="table col">
+                <div class="inline-block">
+                    <div class="title">Reminder refers to</div>
+                </div>
+                <div class="row table_rows even">
+                    <div class="inline_block">Invoice:</div>
+                    <div class="value inline_block">$240</div>
+                </div>
+                <div class="row table_rows odd">
+                    <div class="inline_block">Invoice amount:</div>
+                    <div class="value inline_block">$400</div>
+                </div>
+                <div class="row table_rows even">
+                    <div class="inline_block">Due date:</div>
+                    <div class="value inline_block">$240</div>
+                </div>
+                <div class="row table_rows odd">
+                    <div class="inline_block">Reminder fee:</div>
+                    <div class="value inline_block">$390</div>
+                </div>
+                <div class="row table_rows even">
+                    <div class="inline_block">Interest fee:</div>
+                    <div class="value inline_block">$240</div>
+                </div>
+            </div>
+
+            <!-----------------------PAYMENT---------------------->
+            <div class="payment">
+                <div class="col">
+                    <div class="row">
+                        <div class="col payment_method">
+                            <div class="title black"><b>Payment Method</b></div>
+                        </div>
+                        <div class="row total">
+                            <div class="col titles inline_block">
+                                <div class="total_amount"><b>Total :</b></div>
+                            </div>
+                            <div class="col values inline_block">
+                                <div class="total_value"><b>$1,500</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col iban">
+                        <div class="black"><b>IBAN</b></div>
+                        <div>IBAN-number: JO71CB JO0000 000000 001234 567890</div>
+                        <div>Swift-number: BNOR PH MMXXX</div>
+                        <div>Bank: SEB</div>
+                    </div>
+                    <div class="col bank_transfer">
+                        <div class="black"><b>BANK TRANSFER</b></div>
+                        <div class="row bank_transfer_row">
+                            <div class="inline_block">
+                                <div>Account number: DE89370400440532013000</div>
+                                <div>Clearing number: DEBLZ12345678</div>
+                                <div>Bank: SEB</div>
+                            </div>
+                            <div class="inline_block">
+                                <div>Bankgiro-number: 1234-5678</div>
+                                <div>Plusgiro-number: 1234567-345</div>
+                                <div>Swish-number: 12345678</div>
+                            </div>
+                            <div class="inline_block">
+                                <div>
+                                    Terms of payment: 6
+                                </div>
+                                <div>Late interest rate: 10.50% per annum</div>
+                                <div>Invoice period: &#60;invoice_period></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+            <!------------------------------------FOOTER---------------------------->
+            <div class="col footer">
+                <div class="row contacts">
+                    <div class="row phone inline_block"><i class="fa-solid fa-phone"></i>+123-456-7890</div>
+                    <div class="row mail inline_block"><i class="fa-solid fa-envelope"></i>hello@reallygreatsite.com</div>
+                    <div class="row location inline_block"><i class="fa-solid fa-location-dot"></i>123 Anywhere St., Any City, ST 12345</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_key">
+            <div class="inline footer_key_1">&#60;footer_key_1> &#60;footer_key_1> </div>
+            <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
+        </div>
+    </div>
+</body>
+</html>
