@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/sukar" rel="stylesheet">
+    <title>reminder</title>
+
+    <style>
+        @font-face {
+            font-family: 'kollektif regular';
+            src: url('fonts/Kollektif.ttf'), format(truetype);
+        }
+        body{
+            font-size: 8pt;
+            font-weight: normal;
+            font-family: 'kollektif regular', sans-serif;
+            line-height: 15px;
+            margin: 0;
+            white-space: nowrap;
+            color: #000000;
+            margin-top: 10px;
+            background-color: lightgray; 
+            display: flex;
+            justify-content: center;
+        }
+        .inline{
+            display: inline;
+        }
+        .inline_block{
+            display: inline-block;
+        }
+
+        /**********************CONTAINERS*******************/
+        .container{
+            width: 8.27in;
+            height: 12.5in;
+            margin: auto;
+            position: relative;
+            background-color: white;
+            z-index: 0;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 25px black;
+            overflow: clip;
+        }
+        .content{
+            height: 12.4in;
+            padding-right: 50px;
+            padding-left: 50px;
+            background-color: white;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: 0px;
+            z-index: 0;
+            
+        }
+        /**************************************HEADER*******************************/
+        .orange_cross, .blue_cross{
+            width: 75%;
+            height: 250px;
+            position: absolute;
+            top: -190px;
+        }
+        .orange_cross{
+            background-color: #fabc2a;
+            left: -110px;
+            z-index: 0;
+            transform: rotate(-15deg);
+        }
+        .blue_cross{
+            background-color: #1c2642;
+            right: -110px;
+            z-index: 1;
+            transform: rotate(15deg);
+        }
+        .page_no{
+            color: white;
+            position: absolute;
+            right: 120px;
+            top: 20px;
+            z-index: 2;
+        }
+        .Header{
+            position: relative;
+            margin-top: 120px;
+            height: 80px;
+            color: #1c2642;
+            font-family: 'Anton', sans-serif;
+        }
+        .page_name{
+            font-size: 36.1pt;
+            font-weight: 700;
+            position: absolute;
+            top: 40px;
+        }
+        .logo{
+            font-size: 42.1pt;
+            font-weight: 700;
+            position: absolute;
+            right: 10px;
+        }
+        /****************************REMINDER TEXT*****************/
+        .reminder_text{
+            margin-top: 250px;
+            margin-bottom: 40px;
+            white-space: normal;
+        }
+        .reminder_text .title{
+            margin-bottom: 10px;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        .reminder_text .first_p{
+            margin-bottom: 20px;
+        }
+        .reminder_text .first_p, .reminder_text .second_p{
+            padding-left: 10px;
+        }
+
+        /****************************TABLE*************************/
+        .table{
+            position: relative;
+            margin-bottom: 20px;
+            color: #000000;
+            padding-bottom: 20px;
+            border-bottom: 1px solid black;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .table .title{
+            font-family: 'Anton', sans-serif;
+            margin-bottom: 20px;
+            font-size: 12pt;
+        }
+
+        .table .value{
+            position: absolute;
+            right: 40px;
+        }
+        .total{
+            position: relative;
+            height: 29px;
+            padding-bottom: 22.2px;
+            margin-bottom: 0px;
+            right: -240px;
+            width: 390px;
+            font-size: 20pt;
+            font-family: 'Anton', sans-serif;
+        }
+        .total .title{
+            position: absolute;
+            right: 120px;
+        }
+        .total .value{
+            position: absolute;
+            right: 0;
+            color: #fabc2a;
+        }
+        /****************************PAYMENT***********************/
+        .payment{
+            position: relative;
+            color: #000000;
+            line-height: 21px;
+        }
+        .payment_title{
+            font-size: 15pt;
+            margin-bottom: 20px;
+            font-weight: bolder;
+        }
+        .payment .second-column{
+            padding-left: 190px;
+            position: absolute;
+            top: 20px;
+        }
+        .iban{
+            margin-top: 30px
+        }
+        .terms{
+            margin-top: 45px;
+        }
+        .iban .title, .bank_transfer .title{
+            font-weight: bold;
+        }
+
+
+        /*************************FOOTER************************/
+        .row{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .col{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer{
+            position: absolute;
+            bottom: 50px;
+            letter-spacing: 0 !important;
+            padding-left: 30px;
+        }
+        .footer i{
+            margin-right: 15px;
+            color: #fabc2a !important;
+            display: flex;
+            align-items: center;
+            font-size: 12pt;
+        }
+        .footer .mail{
+            margin-left: 100px;
+        }
+        .footer .location{
+            margin-left: 100px;
+        }
+        .footer_key{
+            position: absolute;
+            bottom: 0;
+            color: white;
+            font-weight: 300;
+            background-color: #1c2642;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 8.27in;
+        }
+        /*************************INVOICE**********************/
+        .invoice{
+            height: 150px;
+            width: 8.27in;
+            background-color: #f6f5f5;
+            position: absolute;
+            top: 240px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+        }
+        .invoice_to{
+            position: relative;
+            top: 0;
+            padding-left: 60px;
+        }
+        .payable_to{
+            position: relative;
+            top: -15px;
+        }
+        .ocr{
+            position: relative;
+            top: -5px;
+        }
+
+        .payable_to{
+            margin-left: 110px;
+        }
+        .ocr{
+            margin-left: 110px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top_design">
+            <div class="orange_cross inline_block"></div>
+            <div class="blue_cross inline_block"></div>
+            <div class="page_no">Page 1/1</div>
+        </div>
+        <div class="content">
+            <div class="Header">
+                <div class="title inline">
+                    <div class="inline page_name">Reminder</div>
+                </div>
+                <div class="logo inline">
+                    <div class="inline">LOGO</div>
+                </div>
+            </div>
+            <!---------------------REMINDER TEXT----------->
+            <div class="reminder_text">
+                <div class="title dark now_bold">Påminnelse obetald faktura nr 5682 från Comp. Inc.</div>
+                <div class="text first_p">
+                    Vi kan inte se att det inkommit någon betalning för rubricerad faktura. Därför ska istället denna påminnelsefaktura betalas. Betalningen ska vara oss tillhanda senast 2021-10-04. Därefter kan fakturan komma att överlämnas till inkasso vilket medför ytterligare kostnader.
+                </div>
+                <div class="text second_p">
+                    Ār fakturan redan betald?</br>
+                    Om du har betalat rekommenderar vi dig att kontrollera att du har betalat till rätt bankgiro och med rätt referens.
+                </div>
+            </div>
+
+            <!------------------REMINDER TABLE----------->
+            <div class="table">
+                <div class="title dark">
+                    <div>Reminder refers to</div>
+                </div>
+                <div class="table_rows">
+                    <div class="inline_block">Invoice:</div>
+                    <div class="inline_block value">$100.00</div>
+                </div>
+                <div class="table_rows">
+                    <div class="inline_block">Invoice amount:</div>
+                    <div class="inline_block value">$100.00</div>
+                </div>
+                <div class="table_rows">
+                    <div class="inline_block">Due date:</div>
+                    <div class="inline_block value">$100.00</div>
+                </div>
+                <div class="table_rows">
+                    <div class="inline_block">Reminder fee:</div>
+                    <div class="inline_block value">$100.00</div>
+                </div>
+                <div class="table_rows">
+                    <div class="inline_block">Interest fee:</div>
+                    <div class="inline_block value">$100.00</div>
+                </div>
+            </div>
+
+            <div class="total">
+                <div class="title inline dark">TOTAL</div>
+                <div class="inline value">$400.00</div>
+            </div>
+
+            <!----------------PAYMENT------------------>
+            <div class="payment">
+                <div class="payment_title dark">
+                    <div><b>PAYMENT INFO</b></div>
+                </div>
+                <div class="inline_block">
+                    <div class="inline_block first-column">
+                        <div class="payment_method">
+                            <div>Bankgiro-number: 12345678</div>
+                            <div>Plusgiro-number: 845747383</div>
+                            <div>Swish-number: 1234562355</div>
+                        </div>
+                        <div class="iban">
+                            <div class="title">IBAN</div>
+                            <div>IBAN-number: JO71CB JO0000 000000 001234 567890</div>
+                            <div>Swift-number: BNOR PH MMXXX</div>
+                            <div>Bank: SEB</div>
+                        </div>
+
+                    </div>
+                    <div class="inline_block second-column">
+                        <div class="bank_transfer">
+                            <div class="title">BANK TRANSFER</div>
+                            <div>Account number: DE89370400440532013000</div>
+                            <div>Clearing number: DEBLZ12345678</div>
+                            <div>Bank: SEB</div>
+                        </div>
+                        <div class="terms">
+                            <div>
+                                Terms of payment: 6
+                            </div>
+                            <div>Late interest rate: 10.50% per annum</div>
+                            <div>Invoice period: &#60;invoice_period></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-----------------------FOOTER------------------>
+            <div class="col footer">
+                <div class="row contacts">
+                    <div class="row phone inline_block"><i class="fa-solid fa-phone"></i>&#60;company_phone></div>
+                    <div class="row mail inline_block"><i class="fa-solid fa-envelope"></i>&#60;company_email></div>
+                    <div class="row location inline_block"><i class="fa-solid fa-location-dot"></i>&#60;company_address></div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------FOOTER--------------------->
+        <div class="footer_key">
+            <div class="inline footer_key_1">&#60;footer_key_1> &#60;footer_key_1> </div>
+            <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
+        </div>
+        <div class="invoice">
+            <div class="invoice_to inline_block">
+                <div class="title">Invoice to</div>
+                <div class="name"><b>John Smith</b></div>
+                <div class="address">
+                    <div>Address: 123 Anywhere St.,Any City, ST 12345</div>
+                    <div>Date: 21/05/2022</div>
+                    <div>Number: +123-456-7890</div>
+                    <div>&#60;receiver_extra_field1>: &#60;value1></div>
+                    <div>&#60;receiver_extra_field2>: &#60;value2></div>
+                </div>
+            </div>
+            <div class="payable_to inline_block">
+                <div class="title">Invoice by</div>
+                <div class="company_info">
+                    <div><b>&#60;company_name></b></div>
+                    <div>&#60;organisation_number></div>
+                    <div>&#60;vat_number></div>
+                    <div>Godkänd för F-skatt</div>
+                </div>
+            </div>
+            <div class="ocr inline_block">
+                <div>OCR No: 12345</div>
+                <div>Reminder number: 2857193521</div>
+                <div>Date: 23/06/2023</div>
+                <div>Due date: 30/06/2023</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
